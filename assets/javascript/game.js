@@ -5,7 +5,7 @@ $(document).ready(function(){
     
         {
             name: "Han Solo",
-            hp: 75,
+            hp: 100,
             image: "han2.jpg",
             attack: 6,
             counter: 10
@@ -29,10 +29,10 @@ $(document).ready(function(){
     
         {
             name: "Death Sticks Guy",
-            hp: 50,
+            hp: 90,
             image: "death-sticks.jpg",
             attack: 6,
-            counter: 30
+            counter: 10
         },
     
         {
@@ -40,7 +40,7 @@ $(document).ready(function(){
             hp: 75,
             image: "greedo.jpg",
             attack: 6,
-            counter: 50
+            counter: 20
         },
     
         {
@@ -48,7 +48,7 @@ $(document).ready(function(){
             hp: 150,
             image: "swayze.jpg",
             attack: 6,
-            counter: 100
+            counter: 30
         }
     ]
     
