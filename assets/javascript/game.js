@@ -135,8 +135,8 @@ $(document).ready(function(){
             $("#text1").empty()
             $("#text2").empty()
             clearTimeout(counter)
-            $("#text1").text("You're dead now. Sorry, probably should have been nicer to people.")
-            $("#text2").text("Click 'Reset' to try again")
+            $("#text1").text("You're dead now. Sorry - probably should have been nicer to people.")
+            $("#text2").text("Try again!")
         }
 
         else if (chosenEnemy.hp <= 0) {
@@ -159,8 +159,6 @@ $(document).ready(function(){
             $("#text1").text("You win! You've defeated all of your enemies and a few unfortunate strangers - congratulations!")
         }
 
-        // var heroAttack = chosenHero.attack
-        // var enemyHP = chosenEnemy.hp
     }
 
 
@@ -174,13 +172,6 @@ $(document).ready(function(){
         $("#textArea").remove()
         initGame()
     }
-    
-    
-    // function attack() {
-    //     //subtract HP from enemy
-    //     //subtract HP from hero 
-    //     //Output text describing fight
-    // }
 
 
 });

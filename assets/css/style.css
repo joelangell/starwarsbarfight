@@ -1,9 +1,9 @@
 html, body {
     background: url('../../assets/images/cantina2.png') no-repeat center fixed; 
     -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h5 {
@@ -11,26 +11,15 @@ h5 {
     text-shadow: #ffe919 .5px .5px 0px;
 }
 
-/* .characters {
-    background-color: gray;
-} */
-
 img {
     border-style: solid;
     border-width: 3px;
     border-color: #ffe919;
 }
 
-#
-
 .col-md-4 {
     text-align: center;
 }
-
-/* #textArea {
-    width: 300px;
-    height: 300px;
-} */
 
 #text1, #text2 {
     border-style: solid;
@@ -44,11 +33,6 @@ img {
     height: 75px;
 }
 
-/* #selectedHero {
-    border-style: solid;
-    border-width: 3px;
-    border-color: green;
-} */
 
 #logo {
     position: absolute;
@@ -56,13 +40,3 @@ img {
     right: 1%;
     border-style: none;
 }
-
-/* .char {
-    transition: width 1s;
-}
-
-.char:hover {
-    opacity: 0.9;
-    height: 200px; 
-    width: 200px;
-} */
