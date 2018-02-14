@@ -5,7 +5,7 @@ $(document).ready(function(){
     
         {
             name: "Han Solo",
-            hp: 50,
+            hp: 75,
             image: "han2.jpg",
             attack: 6,
             counter: 10
@@ -16,15 +16,15 @@ $(document).ready(function(){
             hp: 100,
             image: "cornelius.jpg",
             attack: 6,
-            counter: 10
+            counter: 15
         },
     
         {
             name: "Ponda Baba",
-            hp: 50,
+            hp: 120,
             image: "pondababa.png",
             attack: 6,
-            counter: 10
+            counter: 20
         },
     
         {
@@ -32,23 +32,23 @@ $(document).ready(function(){
             hp: 100,
             image: "death-sticks.jpg",
             attack: 6,
-            counter: 10
+            counter: 30
         },
     
         {
             name: "Greedo",
-            hp: 50,
+            hp: 75,
             image: "greedo.jpg",
             attack: 6,
-            counter: 10
+            counter: 50
         },
     
         {
             name: "Patrick Swayze",
-            hp: 50,
+            hp: 150,
             image: "swayze.jpg",
             attack: 6,
-            counter: 10
+            counter: 100
         }
     ]
     
@@ -71,7 +71,7 @@ $(document).ready(function(){
             var charThing = $("<div id = 'character-" + i + "' class= 'char col-md-" + num + "' value = '" + i + "'></div>")
             $(".characters").append(charThing)
             charThing.html(
-                "<img src = './assets/images/" + charArr[i].image + "' style= 'width: 150px; height: 150px;'/><h5>" + charArr[i].name + "</h5>"
+                "<img src = './assets/images/" + charArr[i].image + "' style= 'width: 150px; height: 150px;'/><h5 class = nameBox>" + charArr[i].name + "<br>" + "HP: " + charArr[i].hp + "<br>" + "Counter: " + charArr[i].counter + "</h5>"
             )
         }
     }
@@ -94,6 +94,9 @@ $(document).ready(function(){
             var textBox2 = $("<div id = 'text2'></div>")
             $("#textArea").append(textBox2)
             $(this).appendTo("#selectedHero")
+            // charThing.html(
+            //     "<img src = './assets/images/" + charArr[i].image + "' style= 'width: 300px; height: 300px;'/><h5>" + charArr[i].name + "<br>" + "HP: " + charArr[i].hp + "</h5>"
+            // )
         }
         else if (!isEnemyChosen) {
             chosenEnemy = charArr[$(this).attr("value")]
@@ -106,20 +109,9 @@ $(document).ready(function(){
         }
     })
     
-    $("#button1").on("click", function() {
-        // console.log(chosenHero.hp)
-        //add selected hero on left of page
-        //add selected enemy on right of page
-        //display attack button
-        //display stats
-    })
 
     $("#attack1").on("click", function() {
         attack()
-        //add selected hero on left of page
-        //add selected enemy on right of page
-        //display attack button
-        //display stats
     })
     
     function attack() {
@@ -127,15 +119,15 @@ $(document).ready(function(){
         isEnemyAlive = true
         $("#text1").empty()
         $("#text2").empty()
-        chosenEnemy.hp -= chosenHero.attack
+        var enemyDamage = chosenEnemy.hp -= chosenHero.attack
         
-        $("#text1").text("You attack " + chosenEnemy.name + " for " + chosenHero.attack + " damage.")
+        $("#text1").text("You attack " + chosenEnemy.name + " for " + chosenHero.attack + " damage - reducing remaining HP to " + enemyDamage + ".")
         
         counter = setTimeout(function() {
-            $("#text2").text(chosenEnemy.name + " counters with an attack dealing " + chosenEnemy.counter + " damage.")
+            $("#text2").text(chosenEnemy.name + " counters with an attack dealing " + chosenEnemy.counter + " damage. You have " + heroDamage + " HP remaining.")
         }, 5000)
         chosenHero.attack += chosenHero.attack
-        chosenHero.hp -= chosenEnemy.counter
+        var heroDamage = chosenHero.hp -= chosenEnemy.counter
         
 
         if (chosenHero.hp <= 0) {
