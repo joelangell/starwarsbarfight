@@ -13,7 +13,7 @@ $(document).ready(function(){
         
         {
             name: "Cornelius Evazan",
-            hp: 100,
+            hp: 80,
             image: "cornelius.jpg",
             attack: 6,
             counter: 15
@@ -29,7 +29,7 @@ $(document).ready(function(){
     
         {
             name: "Death Sticks Guy",
-            hp: 100,
+            hp: 50,
             image: "death-sticks.jpg",
             attack: 6,
             counter: 30
